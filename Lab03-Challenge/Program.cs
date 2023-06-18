@@ -1,18 +1,18 @@
 ﻿using System.Diagnostics.Metrics;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Lab03_Challenge
 {
-    internal class Program
+    public class Program
     {
-        public static int sum = 1;
+       
 
         static void Main(string[] args)
         {
 
             
             Console.WriteLine("Please enter 3 number");
-          string Number  =Console.ReadLine();
-            string[] Numbers = Number.Split(" ");
+          string Numbers  =Console.ReadLine();
             Console.WriteLine($"the multiplication {Multiplication(Numbers)}");
             /*
             Console.WriteLine("Please enter number between 2-10");
@@ -24,20 +24,22 @@ namespace Lab03_Challenge
 */
 
         }
-        public static int Multiplication(string[] Array)
+        public static int Multiplication(string number )
         {
-            
-            int counter=0;
+            string[] Numbers = number.Split(" ");
+
+            int sum = 1;
+        int counter=0;
 
             
-            foreach (string num in Array) {
+            foreach (string num in Numbers) {
                 if (counter == 3)
                 {
                         
                         return sum;
                 }
 
-                if(Array.Length < 3)
+                if(Numbers.Length < 3)
                 {
                     return 0;
 
@@ -48,19 +50,18 @@ namespace Lab03_Challenge
                 {
                     try
                     {
-                        if (Convert.ToInt32(num) > 0) {
                      sum *= Convert.ToInt32(num);
                 counter++;
               
 
                
-                    }
+                    
 
                     }
                     catch (Exception)
                     {
-                        Array[counter] = "1";
-                        sum *= Convert.ToInt32(Array[counter]);
+                        Numbers[counter] = "1";
+                        sum *= Convert.ToInt32(Numbers[counter]);
                     }
 
 
