@@ -10,18 +10,31 @@ namespace Lab03_Challenge
         static void Main(string[] args)
         {
 
-            
+             /*
             Console.WriteLine("Please enter 3 number");
           string Numbers  =Console.ReadLine();
             Console.WriteLine($"The product of these 3 numbers is: {Multiplication(Numbers)}");
-            /*
-            Console.WriteLine("Please enter number between 2-10");
-            string Number = Console.ReadLine();
-            if(Number >2 && Number > 10)
-            {
+           */
+             try {
+                Console.WriteLine("Please enter number between 2-10");
+                int size = Convert.ToInt32(Console.ReadLine());
+                int[] arrnum = new int[size];
+                if (size > 2 && size < 10)
+                {
+                    for (int i = 0; i < size; i++)
+                    {
+                        Console.WriteLine($"{i + 1} of {size} - Enter a number:");
 
+                        arrnum[i] = Convert.ToInt32(Console.ReadLine());
+                    }
+                    Console.WriteLine($"the average is {Randoms(size, arrnum)}");
+
+                }
+            } catch ( FormatException) {
+                Console.WriteLine("please add the real number");
             }
-*/
+            
+
 
         }
         public static int Multiplication(string number )
@@ -70,14 +83,17 @@ namespace Lab03_Challenge
             }
             return sum;
         }
-        public static void Randoms(int num)
+        public static int Randoms(int size , int [] num)
         {
-            for (int i = 1; i <= num; i++)
+            int sum = 0;
+            for (int i = 0; i < size; i++)
             {
-                Random random = new Random();
-                Console.WriteLine($"{i} of num" );
+               sum+= num[i];
+               
             }
 
+                int avg = sum / size;
+                return avg;
         }
     }
    
