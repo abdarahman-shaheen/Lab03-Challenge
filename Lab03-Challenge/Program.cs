@@ -13,7 +13,7 @@ namespace Lab03_Challenge
             
             Console.WriteLine("Please enter 3 number");
           string Numbers  =Console.ReadLine();
-            Console.WriteLine($"the multiplication {Multiplication(Numbers)}");
+            Console.WriteLine($"The product of these 3 numbers is: {Multiplication(Numbers)}");
             /*
             Console.WriteLine("Please enter number between 2-10");
             string Number = Console.ReadLine();
