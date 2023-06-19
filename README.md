@@ -1,4 +1,4 @@
-# Lab03-Challenges
+# Challenges
 
 ## White-Board
 - Challenge 2 (multiplied)
