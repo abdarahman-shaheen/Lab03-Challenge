@@ -49,10 +49,14 @@ namespace Lab03_Challenge
             WriteText(word);
             
             string path = "../../../words.txt";
-            ReadText(path);*/
+            ReadText(path);
             string word = "Hello Friend";
-            reWriteText(word);
-
+            reWriteText(word);*/
+            string []arr=NumberWords("This is a sentance about important things");
+            foreach (string s in arr)
+            {
+                Console.Write(s);
+            }
         }
         public static int Multiplication(string number )
         {
@@ -193,6 +197,17 @@ namespace Lab03_Challenge
             string path = "../../../words.txt";
             File.WriteAllText(path, words);
         }
+        public static string[] NumberWords(string arr)
+        {
+            string[] sentance = arr.Split(" ");
+            string[] newarr=new string[sentance.Length];
+            for (int i = 0; i < sentance.Length; i++)
+            {
+                newarr[i]= $"{sentance[i]}: {sentance[i].Length}";
+                            
+            }
+            return newarr;
+        } 
     }
     
 
