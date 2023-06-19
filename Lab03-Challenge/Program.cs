@@ -1,5 +1,7 @@
 ﻿using System.Diagnostics.Metrics;
 using static System.Runtime.InteropServices.JavaScript.JSType;
+using System.IO;
+using System.Reflection.Emit;
 
 namespace Lab03_Challenge
 {
@@ -39,10 +41,12 @@ namespace Lab03_Challenge
             printStar();
     int [] arr = {1, 1, 1 ,1 };
             Console.WriteLine(FindDublicated(arr));
-*/
+
             int[] arr = { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
             Console.WriteLine(MaxNumber(arr));
-
+*/
+            string word = "Hello words";
+            WriteText(word);
         }
         public static int Multiplication(string number )
         {
@@ -165,6 +169,12 @@ namespace Lab03_Challenge
 
             }
             return max;
+        }
+
+        public static void WriteText(string words)
+        {
+            string path = "../../../words.txt";
+            File.WriteAllText(path, words);
         }
     }
    
