@@ -44,9 +44,12 @@ namespace Lab03_Challenge
 
             int[] arr = { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
             Console.WriteLine(MaxNumber(arr));
-*/
+
             string word = "Hello words";
             WriteText(word);
+            */
+            string path = "../../../words.txt";
+            ReadText(path);
         }
         public static int Multiplication(string number )
         {
@@ -176,7 +179,14 @@ namespace Lab03_Challenge
             string path = "../../../words.txt";
             File.WriteAllText(path, words);
         }
+        public static void ReadText(string path)
+        {
+            string result = File.ReadAllText(path);
+            Console.WriteLine(result);
+        }
     }
-   
+    
+
+
 
 }
