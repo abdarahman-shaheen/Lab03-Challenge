@@ -37,6 +37,8 @@ namespace Lab03_Challenge
 
 
             printStar();*/
+    int [] arr = {1, 1, 1 ,1 };
+            Console.WriteLine(FindDublicated(arr));
 
         }
         public static int Multiplication(string number )
@@ -109,6 +111,42 @@ namespace Lab03_Challenge
                 }
                 Console.WriteLine();
             }
+        }
+
+        public static int FindDublicated(int[] Numbers)
+        {
+            int counter=0;
+            int maxCounter = 0;
+            int maxVaule = 0; 
+            for (int i = 0; i < Numbers.Length; i++)
+            {
+                if (Numbers[i] != maxVaule)
+                {
+                    counter = 0;
+
+                    for (int j = i + 1; j < Numbers.Length; j++)
+                    {
+                        if (Numbers[i] == Numbers[j])
+                        {
+                            counter++;
+                        }
+                        if (maxCounter < counter)
+                        {
+                            maxCounter = counter;
+                            maxVaule = Numbers[i];
+                        }
+
+                    }
+                }
+                if (maxVaule == 0)
+                {
+                    return Numbers[0];
+                }
+                
+             
+
+            }
+            return maxVaule;
         }
     }
    
