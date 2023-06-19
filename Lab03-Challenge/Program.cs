@@ -47,9 +47,12 @@ namespace Lab03_Challenge
 
             string word = "Hello words";
             WriteText(word);
-            */
+            
             string path = "../../../words.txt";
-            ReadText(path);
+            ReadText(path);*/
+            string word = "Hello Friend";
+            reWriteText(word);
+
         }
         public static int Multiplication(string number )
         {
@@ -183,6 +186,12 @@ namespace Lab03_Challenge
         {
             string result = File.ReadAllText(path);
             Console.WriteLine(result);
+        }
+
+        public static void reWriteText(string words)
+        {
+            string path = "../../../words.txt";
+            File.WriteAllText(path, words);
         }
     }
     
