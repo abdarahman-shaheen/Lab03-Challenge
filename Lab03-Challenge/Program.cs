@@ -36,9 +36,12 @@ namespace Lab03_Challenge
 
 
 
-            printStar();*/
+            printStar();
     int [] arr = {1, 1, 1 ,1 };
             Console.WriteLine(FindDublicated(arr));
+*/
+            int[] arr = { 5, 25, 99, 123, 78, 96, 555, 108, 4 };
+            Console.WriteLine(MaxNumber(arr));
 
         }
         public static int Multiplication(string number )
@@ -147,6 +150,21 @@ namespace Lab03_Challenge
 
             }
             return maxVaule;
+        }
+    
+        public static int MaxNumber(int[] numbers)
+        {
+            int max = numbers[0];
+            foreach (int item in numbers)
+            {
+                if (item>max)
+                {
+                    max = item;
+
+                }
+
+            }
+            return max;
         }
     }
    
