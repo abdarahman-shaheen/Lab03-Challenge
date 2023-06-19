@@ -10,31 +10,33 @@ namespace Lab03_Challenge
         static void Main(string[] args)
         {
 
-             /*
-            Console.WriteLine("Please enter 3 number");
-          string Numbers  =Console.ReadLine();
-            Console.WriteLine($"The product of these 3 numbers is: {Multiplication(Numbers)}");
-           */
-             try {
-                Console.WriteLine("Please enter number between 2-10");
-                int size = Convert.ToInt32(Console.ReadLine());
-                int[] arrnum = new int[size];
-                if (size > 2 && size < 10)
-                {
-                    for (int i = 0; i < size; i++)
-                    {
-                        Console.WriteLine($"{i + 1} of {size} - Enter a number:");
+            /*
+           Console.WriteLine("Please enter 3 number");
+         string Numbers  =Console.ReadLine();
+           Console.WriteLine($"The product of these 3 numbers is: {Multiplication(Numbers)}");
 
-                        arrnum[i] = Convert.ToInt32(Console.ReadLine());
-                    }
-                    Console.WriteLine($"the average is {Randoms(size, arrnum)}");
+            try {
+               Console.WriteLine("Please enter number between 2-10");
+               int size = Convert.ToInt32(Console.ReadLine());
+               int[] arrnum = new int[size];
+               if (size > 2 && size < 10)
+               {
+                   for (int i = 0; i < size; i++)
+                   {
+                       Console.WriteLine($"{i + 1} of {size} - Enter a number:");
 
-                }
-            } catch ( FormatException) {
-                Console.WriteLine("please add the real number");
-            }
-            
+                       arrnum[i] = Convert.ToInt32(Console.ReadLine());
+                   }
+                   Console.WriteLine($"the average is {Randoms(size, arrnum)}");
 
+               }
+           } catch ( FormatException) {
+               Console.WriteLine("please add the real number");
+           }
+
+
+
+            printStar();*/
 
         }
         public static int Multiplication(string number )
@@ -94,6 +96,19 @@ namespace Lab03_Challenge
 
                 int avg = sum / size;
                 return avg;
+        }
+
+        public static void printStar()
+        {
+            for (int i = 1; i <= 5; i++)
+            {
+                for (int j = 1; j <= i; j++)
+                {
+                    Console.Write("*");
+
+                }
+                Console.WriteLine();
+            }
         }
     }
    
